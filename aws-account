@@ -231,6 +231,67 @@ helping teams access operational information more efficiently."
 
 
 9.Participate in rotating frontline support duties for tools and services (administrative duties).
+"I participated in rotating frontline support duties for engineering tools and services. My responsibilities included monitoring CI/CD pipelines, troubleshooting build and deployment issues, managing user access,
+supporting release activities, and maintaining development tools such as Git, Jenkins, and cloud environments. I acted as the first point of contact for operational issues, investigated incidents, 
+coordinated resolutions, and ensured minimal disruption to engineering teams."
 
 10.Investigate, plan, and execute regular upgrades and refreshes of tools and shared infrastructure.
 Perform other duties as assigned.
+
+What it means in real time
+As a DevOps/Platform Engineer, you ensure that engineering tools, servers, and infrastructure remain secure, stable, and up to date.
+
+Real-Time Scenario 1: Jenkins Upgrade
+Current Jenkins version has security vulnerabilities or missing features.
+Review release notes and compatibility.
+Test the upgrade in a lower environment.
+Take backups.
+Perform the upgrade during a maintenance window.
+Validate pipelines after the upgrade.
+
+Real-Time Scenario 2: Kubernetes Cluster Refresh
+Upgrade Kubernetes from an older version to a supported version.
+Verify application compatibility.
+Upgrade worker nodes gradually.
+Validate workloads after upgrade.
+
+kubectl get nodes
+kubectl get pods -A
+kubectl drain <node>
+
+Real-Time Scenario 3: Docker Environment Upgrade
+Upgrade Docker Engine on build servers.
+Validate container functionality.
+Update Docker images to use secure base images.
+
+Real-Time Scenario 4: AWS Infrastructure Maintenance
+Upgrade EC2 instances.
+Apply OS security patches.
+Refresh AMIs.
+Review IAM permissions and unused resources.
+
+Example:
+Monthly patching of Linux servers and validating application functionality after maintenance activities.
+
+Real-Time Scenario 5: Tool Refresh Activities
+
+Support tools such as:
+
+GitHub/GitLab
+Jenkins
+Artifactory
+SonarQube
+Nexus
+Kubernetes
+Monitoring tools
+
+Tasks include:
+Version upgrades
+Plugin updates
+Security patching
+Backup and recovery validation
+Performance optimization
+
+"In my project, I participated in the maintenance and continuous improvement of development and infrastructure platforms. My responsibilities included investigating upgrade requirements, reviewing compatibility impacts, planning maintenance activities, 
+and executing upgrades for tools such as Jenkins, Docker, Kubernetes, and cloud infrastructure components. I performed backups, validated environments after upgrades, and coordinated with development teams to minimize operational disruption.
+I also handled additional operational and administrative tasks as required to ensure platform stability, security, and availability."
