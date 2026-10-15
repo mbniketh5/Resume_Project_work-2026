@@ -212,10 +212,22 @@ Build status
 Deployment status
 Failure alerts
 
+Real-Time Scenario 3: Kubernetes + Monitoring Tools
 
+Integrated:
+ Kubernetes
+ Prometheus
+ Grafana
 
+Workflow:
+ Application metrics collected automatically.
+ Dashboards display CPU, memory, and error rates.
+ Alerts generated when thresholds are exceeded.
 
-
+"In my project, I worked on integrating engineering tools and services to streamline development and operational workflows. I used APIs and automation frameworks to connect GitHub, CI/CD pipelines, Jira, and AWS services, 
+reducing manual tasks and improving process efficiency. For example, deployment pipelines automatically updated issue-tracking systems 
+and sent notifications to collaboration platforms. I also explored AI-enabled integrations and MCP-based architectures that allowed engineering tools such as GitHub, Kubernetes, and cloud services to interact through a unified interface, 
+helping teams access operational information more efficiently."
 
 
 9.Participate in rotating frontline support duties for tools and services (administrative duties).
