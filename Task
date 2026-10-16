@@ -1,4 +1,11 @@
-1) cv mentioned projects and freelance project-creation-work-deployment
-2) zenpharma-k8s-error-troubleshoot-worknote
-3) linkedin -post
-4) Daily command- run based on docker-file | k8s | dockerfile creation-scripts
+pj.1#1) cv mentioned projects and freelance project-creation-work-deployment- ##done ( freelance section need to modify-docker)
+   ->terraform-iac
+    -->promethues /graphana installtion- monitoring
+2) zenpharma-k8s-error-troubleshoot-worknote-##process-
+    -->printout -->studay the work architure senerios
+3) linkedin -post-##process
+pj.3#4) Daily command- run based on docker-file | k8s | dockerfile creation-scripts- aws-daily-accnt-install docker,terraform,
+  python3,awscli,passwordless connection --docker file and terraform file writing practise
+Pj.2#5)jenkins cicd--created aws-acont->git clone->starweb repo and exicute project
+pj.4#6)
+
