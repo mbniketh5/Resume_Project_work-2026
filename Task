@@ -1,6 +1,9 @@
 pj.1#1) cv mentioned projects and freelance project-creation-work-deployment- ##done ( freelance section need to modify-docker)
    ->terraform-iac-alomst done###
-    -->promethues /graphana installtion- monitoring
+    -->promethues /graphana installtion- monitoring-done 
+   -->cdAdviser and node_exporter -installed -done both are working fine in ssh-window , pending
+in web-portal -need to check 
+  -->study-kit prepared -take printout and study
 
 2) zenpharma-k8s-error-troubleshoot-worknote-##process-
     -->printout -->studay the work architure senerios
