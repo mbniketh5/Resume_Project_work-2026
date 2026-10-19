@@ -1,0 +1,141 @@
+Prometheus → Collect metrics from servers and containers.
+Grafana → Create dashboards and monitor application health.
+Alertmanager (optional) → Send email/Slack alerts.
+Node Exporter → Collect EC2 CPU, Memory, Disk metrics.
+cAdvisor → Collect Docker container metrics.
+
+GitHub
+   |
+Jenkins CI/CD
+   |
+Docker Container (StarWeb App)
+   |
+EC2 Instance
+   |
+------------------------------------------------
+| Prometheus  | Grafana | Node Exporter |
+| cAdvisor    | AlertManager(optional)  |
+------------------------------------------------
+Phase 1: Install Node Exporter
+
+SSH into EC2:
+wget https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_exporter-1.9.1.linux-amd64.tar.gz
+tar -xvf node_exporter-*.tar.gz
+cd node_exporter-*
+./node_exporter --open 1 ssh and run keep-it as it is , parrallel open new ssh run localhost:9100/metrics
+
+expected- curl localhost:9100/metrics
+
+Open in browser: http://EC2_PUBLIC_IP:9100/metrics
+
+Phase 2: Run Prometheus Using Docker
+mkdir prometheus
+cd prometheus
+
+nano prometheus.yml
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['EC2_PRIVATE_IP:9100']
+
+Run Prometheus:
+docker run -d \
+--name prometheus \
+-p 9090:9090 \
+-v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml \
+prom/prometheus
+
+check : docker ps 
+expect: curl http://localhost:9090
+
+Phase 3: Install cAdvisor
+This monitors Docker containers.
+
+docker run -d \
+--name=cadvisor \
+-p 8081:8080 \
+-v /:/rootfs:ro \
+-v /var/run:/var/run:ro \
+-v /sys:/sys:ro \
+-v /var/lib/docker/:/var/lib/docker:ro \
+gcr.io/cadvisor/cadvisor:latest
+
+Add to Prometheus: in same prometheus .ymal file added below line 
+scrape_configs:
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["EC2_PRIVATE_IP:8081"]
+
+docker restart premetheus
+....................................
+Now you can monitor:
+Docker CPU
+Docker Memory
+Container Restarts
+Network Usage
+................................
+Phase 4: Install Grafana
+docker run -d \
+--name grafana \
+-p 3000:3000 \
+grafana/grafana
+
+expect: curl http:\\localhost:3000
+http://EC2_PUBLIC_IP:3000
+
+login :
+Username: admin
+Password: admin
+
+Phase 5: Connect Grafana to Prometheus
+Grafana:
+Connections
+ → Data Sources
+ → Add Data Source
+ → Prometheus
+
+http://PROMETHEUS_IP:9090
+save &test
+
+Phase 6: Import Dashboards
+Recommended Dashboard IDs:
+
+Node Exporter Dashboard - 1860
+Docker Monitoring Dashboard - 193
+
+import:
+Dashboards
+ → Import
+ → Enter ID
+AWS Security Group Changes
+
+Allow ports:
+1 - 22 SSH
+2 - 80 Nginx
+3 - 3000 Grafana
+4 - 9090 Prometheus
+5 - 9100 Node Exporter
+6 - 8081 cAdvisor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
