@@ -129,7 +129,18 @@ You can say:
 I implemented Prometheus for metrics collection, Node Exporter for server monitoring, cAdvisor for container monitoring, and Grafana for visualization.
 This allowed me to track CPU, memory, disk utilization, container health, and application availability through real-time dashboards."
 
+trouble-shoot cmd 
+sudo ss -tulpn | grep -E '3000|9090|9100'
+docker logs grafana
+docker logs prometheus
 
+quick cleanup you
+sudo apt clean
+sudo apt autoremove -y
+docker system prune -a -f 
+
+docker start prometheus
+docker stop prometheus
 
 
 
