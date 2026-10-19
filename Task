@@ -1,5 +1,5 @@
 pj.1#1) cv mentioned projects and freelance project-creation-work-deployment- ##done ( freelance section need to modify-docker)
-   ->terraform-iac
+   ->terraform-iac-alomst done###
     -->promethues /graphana installtion- monitoring
 
 2) zenpharma-k8s-error-troubleshoot-worknote-##process-
@@ -14,7 +14,7 @@ pj.3#4) Daily command- run based on docker-file | k8s | dockerfile creation-scri
 
 Pj.2#5)jenkins cicd--created aws-acont->git clone->starweb repo and exicute project-#done
      ->http://public-ip:8080 -config-pending 
-      ->modify the jenkins file (inscript-docker image name and container name>
+      ->modify the jenkins file (inscript-docker image name and container name>- jenkins file have 
       ->run the job before to verify the zone and other setting
 pj.4#6)
 
