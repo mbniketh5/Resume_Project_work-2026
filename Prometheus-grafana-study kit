@@ -120,7 +120,14 @@ Allow ports:
 5 - 9100 Node Exporter
 6 - 8081 cAdvisor
 
+----------------------------------------------
+Interview Explanation
 
+You can say:
+
+"After deploying my StarWeb static application using Docker, Terraform, Jenkins and AWS EC2, 
+I implemented Prometheus for metrics collection, Node Exporter for server monitoring, cAdvisor for container monitoring, and Grafana for visualization.
+This allowed me to track CPU, memory, disk utilization, container health, and application availability through real-time dashboards."
 
 
 
