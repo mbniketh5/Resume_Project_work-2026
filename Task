@@ -3,7 +3,7 @@ pj.1#1) cv mentioned projects and freelance project-creation-work-deployment- ##
     -->promethues /graphana installtion- monitoring-done 
    -->cdAdviser and node_exporter -installed -done both are working fine in ssh-window , pending
 in web-portal -need to check 
-  -->study-kit prepared -take printout and study
+  -->study-kit prepared -take printout and study and aws-task doc
 
 2) zenpharma-k8s-error-troubleshoot-worknote-##process-
     -->printout -->studay the work architure senerios
@@ -19,5 +19,8 @@ Pj.2#5)jenkins cicd--created aws-acont->git clone->starweb repo and exicute proj
      ->http://public-ip:8080 -config-pending 
       ->modify the jenkins file (inscript-docker image name and container name>- jenkins file have 
       ->run the job before to verify the zone and other setting
-pj.4#6)
+
+pj.4#6) 
+
+
 
