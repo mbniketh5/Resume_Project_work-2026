@@ -1,0 +1,25 @@
+S3 Bucket in AWS DevOps - Simple Explanation
+
+Amazon S3 (Simple Storage Service) is used to store files in the cloud.
+
+In DevOps, S3 is commonly used for:
+1. Store Application Files
+Example:
+index.html
+style.css
+Images
+Build artifacts (.jar, .war, .zip)
+
+After Jenkins builds your application, it can upload the files to an S3 bucket.
+
+2. Static Website Hosting
+In your StarWeb project, instead of running Nginx on EC2, you can upload:
+index.html
+style.css
+
+to an S3 bucket and AWS serves the website directly.
+
+3. Terraform Remote State Storage
+When using Terraform:
+
+terraform.tfstate
